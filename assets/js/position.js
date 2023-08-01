@@ -26,10 +26,13 @@ function showPosition(position) {
 
   originPoint = new PointMap(latitude, longitude);
 
-  new Mapkick.Map("map", [originPoint]);
+  destination = new PointMap(-0.14474, -78.43287);
+
+  buildDirections();
 }
 
 function showError(error) {
+  console.log(error);
   switch (error.code) {
     case error.PERMISSION_DENIED:
       alert("User denied the request for Geolocation.");

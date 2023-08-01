@@ -3,19 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Uber - Cost stimate</title>
+    <title>Uber - Cost Estimate</title>
     <link rel="stylesheet" href="assets/css/main.css" />
 
+    <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js"></script>
     <link
-      href="https://api.mapbox.com/mapbox-gl-js/v2.12.0/mapbox-gl.css"
+      href="https://api.tiles.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css"
       rel="stylesheet"
     />
-    <script src="https://api.mapbox.com/mapbox-gl-js/v2.12.0/mapbox-gl.js"></script>
-    <script src="assets/js/mapkick.js"></script>
-    <script>
-      mapboxgl.accessToken =
-        "pk.eyJ1IjoicmtvcnRlZ2EiLCJhIjoiY2wyMjdyMjhsMTdmNDNlbWk1N3QyNWkxZiJ9.9K-6bLBv-30hObNDFI7tow";
-    </script>
   </head>
   <body>
     <div id="map"></div>
@@ -25,6 +20,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="assets/js/models/point_map.js"></script>
+    <script src="assets/js/directions.js"></script>
     <script src="assets/js/position.js"></script>
   </body>
 </html>

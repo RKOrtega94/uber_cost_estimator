@@ -11,7 +11,75 @@ body {
   height: 100vh;
 }
 
-#map {
+#main {
+  position: relative;
   width: 100vw;
   height: 100vh;
+}
+
+.search-box-container {
+  position: absolute;
+  z-index: 1;
+  background-color: #fff;
+  padding: 10px;
+  top: 0;
+  left: 0;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.search-title {
+  display: flex;
+  align-items: center;
+}
+
+.search-title > img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.search-title > h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.search-box-inputs-container {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+#map {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.search-box-input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: left;
+}
+
+.search-box-input-container > label {
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.search-box-input-container > input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  font-size: 1rem;
+  font-weight: 500;
 }
