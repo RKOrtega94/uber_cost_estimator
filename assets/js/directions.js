@@ -6,6 +6,7 @@ mapboxgl.accessToken =
  * @function buildDirections
  */
 function buildDirections() {
+  // Initialize the map
   const map = new mapboxgl.Map({
     container: "map",
     style: "mapbox://styles/mapbox/streets-v11", // You can use other Mapbox styles if needed
@@ -13,15 +14,19 @@ function buildDirections() {
     zoom: 12, // Set the initial zoom level
   });
 
+  // Add directions control to the map
   const directions = new MapboxDirections({
     accessToken: mapboxgl.accessToken,
-    units: "metric",
-    profile: "mapbox/driving",
+    unit: "metric", // Use 'imperial' for non-metric units
+    profile: "mapbox/driving", // You can use 'mapbox/walking', 'mapbox/cycling', etc.
     controls: {
       inputs: true,
-      instructions: true,
     },
   });
 
+  /*  document.getElementByClassName("mapbox-directions-profile").style.display =
+    "none"; */
+  $(".mapbox-directions-profile").hide();
+  // Add the control to the map
   map.addControl(directions, "top-left");
 }
