@@ -8,6 +8,10 @@
  *
  * @function getLocation - Gets the user's position.
  */
+
+let originPoint;
+let destination;
+
 function getLocation() {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(showPosition, showError);
@@ -20,7 +24,9 @@ function showPosition(position) {
   const latitude = position.coords.latitude;
   const longitude = position.coords.longitude;
 
-  new Mapkick.Map("map", [{ latitude: latitude, longitude: longitude }]);
+  originPoint = new PointMap(latitude, longitude);
+
+  new Mapkick.Map("map", [originPoint]);
 }
 
 function showError(error) {
