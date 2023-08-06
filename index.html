@@ -3,37 +3,41 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Uber - Cost Estimate</title>
-    <link rel="stylesheet" href="assets/css/main.css" />
+    <title>Const Estimate</title>
 
-    <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js"></script>
-    <link
-      href="https://api.tiles.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css"
+    <!-- Main style -->
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <!-- <link
       rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/mapbox-gl-directions/4.1.1/mapbox-gl-directions.css"
-      integrity="sha512-vD8I46RzX0FTuCMciAdrVmfQzIhjlbGPD7hJA09Tob41KkMdvz11TQj3sMWCZfouS5QdokiDDQxqc3cG/M1kyg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+      href="path/to/font-awesome/css/font-awesome.min.css"
+    /> -->
     <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/mapbox-gl-directions/4.1.1/mapbox-gl-directions.js"
-      integrity="sha512-USF6vlr7XuSuMbZTBe2Ks2AkCJL0G/hVUTbNkO0uBXlF9lHcUZT2/V2Pu6Sxsv0BANmn5cNwRh7qjEvtRinGcw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
+      async
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCubEyzWmC21Nbn60BD6J3lZbm0nCkTJvc&libraries=places&callback=initMap"
     ></script>
   </head>
   <body>
-    <div id="map"></div>
+    <div class="main">
+      <div class="form-container">
+        <div class="title-container">
+          <img src="assets/icons/uber.png" alt="" height="50px" width="50px" />
+          <span>Cost Estimate</span>
+        </div>
+        <hr />
+        <input id="start" type="text" placeholder="Origen" />
+        <input id="destination" type="text" placeholder="Destino" />
+        <div id="information-container"></div>
+      </div>
+      <div id="map" class="map-container"></div>
+    </div>
     <script
       src="https://code.jquery.com/jquery-3.7.0.min.js"
       integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
       crossorigin="anonymous"
     ></script>
-    <script src="assets/js/models/point_map.js"></script>
-    <script src="assets/js/directions.js"></script>
+    <script src="assets/js/constants.js"></script>
     <script src="assets/js/position.js"></script>
+    <script src="assets/js/map.js"></script>
+    <script src="assets/js/cost.js"></script>
   </body>
 </html>
